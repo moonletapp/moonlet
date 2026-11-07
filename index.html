@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Měsíček / Moonlet</title>
+<link rel="icon" href="favicon.png">
+<style>
+:root{--bg:#140E3A;--bg2:#2A1F63;--card:rgba(255,255,255,.07);--line:rgba(255,255,255,.12);--text:#F4F1FF;--sub:#B9B2DD;--accent:#FFD66B}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]){--bg:#F3F0FF;--bg2:#E4DEFF;--card:#fff;--line:rgba(20,14,58,.1);--text:#1C1640;--sub:#5D5689;--accent:#6A4DE0}}
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(180deg,var(--bg),var(--bg2)) fixed;color:var(--text);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Nunito","Segoe UI",sans-serif}
+main{max-width:720px;margin:0 auto;padding:28px 16px 64px}
+nav{display:flex;flex-wrap:wrap;gap:6px 16px;justify-content:space-between;align-items:center;margin-bottom:28px;font-weight:700;font-size:15px}
+nav .links{display:flex;flex-wrap:wrap;gap:6px 16px}
+a{color:var(--accent);text-decoration:none;word-break:break-word}a:hover{text-decoration:underline}
+button.lang{background:var(--card);border:1px solid var(--line);color:var(--text);border-radius:999px;padding:6px 14px;font:inherit;cursor:pointer}
+h1{font-size:34px;line-height:1.15;margin:0 0 6px}
+h2{font-size:19px;margin:0 0 6px}h3{font-size:16px;margin:16px 0 2px}
+.meta{color:var(--sub);font-size:14px;margin:0 0 20px}
+.intro{font-size:18px;font-weight:700;margin:0 0 18px}
+section{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px 20px;margin:0 0 12px}
+section p{margin:0 0 8px}section p:last-child{margin-bottom:0}
+ul{margin:4px 0 0;padding-left:20px}
+.hero{text-align:center;margin:12px 0 26px}.hero .intro{color:var(--sub)}
+.moon{width:72px;height:72px;margin:0 auto 14px;border-radius:50%;box-shadow:-14px 10px 0 0 var(--accent);transform:translateX(10px)}
+.mail{font-size:18px;font-weight:700}
+[data-lang]{display:none}html.cs [data-lang=cs],html.en [data-lang=en]{display:block}
+</style>
+</head>
+<body>
+<main>
+<div data-lang="cs">
+<nav><div class="links"><a href="index.html">Podpora</a><a href="privacy.html">Zásady ochrany soukromí</a><a href="terms.html">Podmínky použití</a></div>
+<button class="lang" onclick="setLang('en')">English</button></nav>
+<div class="hero"><div class="moon"></div><h1>Měsíček</h1><p class="intro">Útulný deník nálady a spánku pro iPhone. Zdarma, žádný účet.</p></div>
+<section><h2>Podpora</h2><p>Máš otázku, nápad nebo jsi našel(a) chybu? Napiš, rád(a) odpovím.</p><p class="mail"><a href="mailto:moonletapp@gmail.com">moonletapp@gmail.com</a></p></section>
+<section><h3>Kde jsou moje data?</h3><p>Jen v tvém telefonu a v záloze ve tvém iCloudu. Autor je nevidí.</p><h3>Jak přenesu data do nového telefonu?</h3><p>Se zapnutou zálohou na iCloud se po instalaci nabídne obnovení. Jinak v Nastavení → Záloha a data ulož zálohu do souboru a v novém telefonu ji načti.</p></section>
+<section><h2>Zdraví</h2><p>Měsíček je deník pro přehled a radost, ne zdravotnický prostředek. Neslouží k diagnostice ani léčbě poruch spánku nebo nálady a přehledy v něm jsou jen orientační.</p><p>Pokud dlouhodobě špatně spíš nebo se necítíš dobře, obrať se na lékaře nebo psychologa.</p><h3>Když je ti hodně zle</h3><p>Linka první psychické pomoci: 116 123 (nonstop, zdarma)</p><p>Linka bezpečí pro děti a mladé do 26 let: 116 111</p><p>V ohrožení života volej 155 nebo 112</p><p>V jiných zemích volej místní linku pomoci nebo tísňové číslo.</p></section>
+</div>
+<div data-lang="en">
+<nav><div class="links"><a href="index.html">Support</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a></div>
+<button class="lang" onclick="setLang('cs')">Česky</button></nav>
+<div class="hero"><div class="moon"></div><h1>Moonlet</h1><p class="intro">A cozy mood and sleep diary for iPhone. Free, no account.</p></div>
+<section><h2>Support</h2><p>Got a question, an idea or found a bug? Write to me, I'm happy to help.</p><p class="mail"><a href="mailto:moonletapp@gmail.com">moonletapp@gmail.com</a></p></section>
+<section><h3>Where is my data?</h3><p>Only on your phone and in a backup in your own iCloud. The developer can't see it.</p><h3>How do I move my data to a new phone?</h3><p>With iCloud backup on, you'll be offered a restore after installing. Otherwise save a backup file in Settings → Backup &amp; data and open it on the new phone.</p></section>
+<section><h2>Health</h2><p>Moonlet is a diary that helps you notice patterns in your mood and sleep. It isn't a medical device: it doesn't diagnose or treat sleep or mood disorders, and its insights are only a rough guide.</p><p>If you've been sleeping badly or not feeling well for a long time, please talk to a doctor or therapist.</p><h3>If you’re really struggling</h3><p>Please reach out to someone. Call your local emergency number (112 in the EU, 911 in the US) or a local crisis line.</p><p>Czech Republic: 116 123 (free crisis line, 24/7)</p><p>UK &amp; Ireland: Samaritans 116 123</p><p>US: 988 Suicide &amp; Crisis Lifeline</p></section>
+</div>
+</main>
+<script>
+function setLang(l){document.documentElement.className=l;document.documentElement.lang=l;try{history.replaceState(null,'','?lang='+l)}catch(e){}
+document.querySelectorAll('nav a').forEach(function(a){a.href=a.getAttribute('href').split('?')[0]+'?lang='+l});}
+var q=new URLSearchParams(location.search).get('lang');
+setLang(q==='cs'||q==='en'?q:((navigator.language||'').toLowerCase().indexOf('cs')===0||(navigator.language||'').toLowerCase().indexOf('sk')===0?'cs':'en'));
+</script>
+</body>
+</html>
